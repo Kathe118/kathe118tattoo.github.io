@@ -1,9 +1,65 @@
-/* Reset básico */
+/* Reset y estilos base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: 'UnifrakturCook', cursive;
+  background-color: #111;
+  color: #fff;
+  line-height: 1.6;
+  padding: 0 15px; /* margenes en pantallas pequeñas */
+}
+
+/* Encabezado adaptativo */
+.encabezado {
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #222;
+}
+
+.encabezado h1 {
+  font-size: 2rem;
+}
+
+.encabezado nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.encabezado nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.encabezado nav a:hover {
+  color: #ff4e00;
+}
+
+/* Main adaptado */
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* Pie de página */
+footer {
+  background-color: #222;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
 
 body {
   font-family: Arial, sans-serif;
@@ -506,4 +562,24 @@ section h2 {
 .whatsapp-boton a:hover {
   background-color: #1ebe57;
   transform: scale(1.05);
+}
+@media (max-width: 600px) {
+  .encabezado nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .formulario input,
+  .formulario textarea {
+    font-size: 1rem;
+  }
+
+  .encabezado h1 {
+    font-size: 1.5rem;
+  }
+
+  .whatsapp-boton a {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
 }
